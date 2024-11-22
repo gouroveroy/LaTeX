@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage[style=ieee]{biblatex}
+\addbibresource{ref.bib}
+
+\title{The History Behind Leap Year}
+\author{Gourove Roy (2105017)}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+A leap year is a calendar year that contains an additional day compared to a
+common year \cite{1}. This article covers the development of the leap year system and
+its importance in keeping our calendar aligned with Earth’s revolution around
+the sun.
+
+\section{History}
+\textcolor{blue}{Did you know?} The Earth takes about 365 days to orbit the Sun, but it’s not exactly 365. In fact, it’s around \textcolor{red}{\sout{365}} \textcolor{green}{365.24} days.
+
+\subsection{Julian Calendar}
+Introduced by Julius Caesar (Figure 1a) in 45 BC, the “Julian Calendar” in-
+cluded a leap year every four years. This was necessary because the solar year
+is approximately 365.25 days long.
+
+\subsection{Gregorian Calendar}
+The modern leap year system was developed under Gregory XIII (Figure 1b) in
+1582. In the “Gregorian Calendar”, leap years are introduced every four years,
+except years divisible by 100 but not divisible by 400.
+
+\section{Leap Year Rules}
+The rules for calculating a leap year can be summarized as:
+\begin{enumerate}
+    \item \textbf{A year is a leap year if:}
+        \begin{enumerate}
+            \item t is divisible by 4 and not divisible by 100
+            \item Or it is divisible by 400.
+        \end{enumerate}
+    \item \textbf{A year is \textit{NOT} a leap year \underline{in all other cases}.}
+\end{enumerate}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.35\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/julius.jpg}
+        \caption{Julius}
+    \end{subfigure}
+    % \hfill
+    \begin{subfigure}{0.35\textwidth}
+        \centering
+        \includegraphics[width=.94\textwidth]{images/gregory.PNG}
+        \caption{Gregory}
+    \end{subfigure}
+    \caption{Pioneers of Modern Calendars}
+\end{figure}
+
+\section{Leap Year Calculation Formula}
+The formula to determine if a year Y is a leap year (or not) is written below.
+\begin{equation*}
+    \textnormal{Leap Year} = 
+    \begin{cases}
+        \text{True,} & \text{if }(Y \% 4 = 0 \&\& \% 100 \neq 0) || Y \% 400 = 0 \\
+        \text{False,} & \text{otherwise}
+    \end{cases}
+\end{equation*}
+Some examples of leap year calculations are shown in Table 1.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{\textbf{Year}} & \multicolumn{3}{c|}{\textbf{Divisible By}} & \multirow{2}{*}{\textbf{Leap Year?}} \\
+        \cline{2-4}
+        & \textbf{4?} & \textbf{100?} & \textbf{400?} & \\
+        \hline
+        1900 & Yes & Yes & No & No \\
+        \hline
+        2000 & Yes & Yes & Yes & Yes \\
+        \hline
+        2024 & Yes & No & No & Yes \\
+        \hline
+    \end{tabular}
+    \caption{Leap Year Calculation Examples}
+\end{table}
+
+\section{Importance}
+The Earth takes approximately 365.24 days to complete one orbit around the
+sun. This discrepancy accumulates, and leap years help correct it. Without leap years, seasons would gradually drift over time.
+
+\section*{Disclaimer}
+The article is designed with the sole purpose of evaluating students’ \LaTeX{} proficiency.
+\pagebreak
+\printbibliography
+\end{document}

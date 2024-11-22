@@ -1,0 +1,74 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{ulem}
+\usepackage[style=ieee]{biblatex}
+
+\addbibresource{ref.bib}
+
+\title{CSE 300 Online 1}
+\author{2105017}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+This is the first online practice on \LaTeX.\\
+We will do some styling in section 2.
+\section{Styling}
+This is \textcolor{red}{bold}. This is \textit{\textcolor{blue}{italic}} \& so on.
+\section*{Use of special characters}
+You can use special characters by preceding with \textbackslash. Another package can be
+used named as verbatim. Example: \verb|~!$#\@*^|
+\section{List}
+There are 3 kinds of list.
+\begin{enumerate}
+    \item[i] Un-ordered
+    \item[ii] Ordered
+    \item[iii] Description
+\end{enumerate}
+Let’s see an example of lists:
+\begin{enumerate}
+    \item[\textbf{CSE 311}] Data Communication I
+    \begin{itemize}
+        \item Fourier
+        \item[] ADC
+    \end{itemize}
+    \item[\textbf{CSE 305}] Computer Architecture
+    \begin{enumerate}
+        \item[1] MIPS
+        \begin{enumerate}
+            \item[(a)] \textit{commands}
+            \item[(b)] \textit{pipeline}
+        \end{enumerate}
+        \item[2] Shared memory
+    \end{enumerate}
+    \item[\textbf{CSE 309}] Compiler
+\end{enumerate}
+\section{Table}
+For understanding the use of multi-row and multi-column command see the
+table 1
+\begin{table}[htpb]
+    \centering
+    \begin{tabular}{llll}
+        \hline
+        \multicolumn{1}{|l|}{\multirow{2}{*}{Dollar}} & \multicolumn{1}{l|}{Rupee} & \multicolumn{1}{l|}{Taka} & \multicolumn{1}{l|}{Euro}   \\ \cline{2-4} 
+        \multicolumn{1}{|l|}{}                        & \multicolumn{2}{l|}{}                                  & \multicolumn{1}{|l|}{DU}     \\ \cline{4-4} 
+        \multicolumn{1}{|l|}{City}                    & \multicolumn{2}{l}{\ \ \ \ \ Dhaka}                              & \multicolumn{1}{l|}{BUET}                        \\ \cline{1-1} \cline{4-4} 
+        \multicolumn{1}{|l|}{Food}                   & \multicolumn{2}{l|}{}                                  & \multicolumn{1}{l|}{Mosque} \\ \cline{1-4}
+    \end{tabular}
+    \caption{A table for online test}
+\end{table}
+\end{document}

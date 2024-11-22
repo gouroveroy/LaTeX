@@ -1,0 +1,86 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage[style=ieee]{biblatex}
+
+\addbibresource{ref.bib}
+
+\title{July2023 CSE300 Week9 Online Evaluation}
+\author{Ajmain Yasar Ahmed Sahil}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section*{DNA vs RNA Comparison}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/DNA.png}
+        \caption{\textit{Deoxyribonucleic acid}}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/RNA.png}
+        \caption{\textit{Ribonucleic acid}}
+    \end{subfigure}
+\end{figure}
+\section*{SPEC CPU Benchmark}
+\begin{table}[htbp]
+    \centering
+    \caption{SPECINTC2006 benchmark programs.}
+    \begin{tabular}{|c|ccc|}
+        \hline
+        \multirow{2}{*}{Name} & \multicolumn{3}{c|}{Details}                                                                     \\ \cline{2-4} 
+                              & \multicolumn{1}{l|}{Description}       & \multicolumn{1}{c|}{Instruction Count} & Reference Time \\ \hline
+        gcc                   & \multicolumn{1}{l|}{GNU C Compiler}    & \multicolumn{1}{c|}{794 G}             & 8050 sec       \\ \hline
+        h264avc               & \multicolumn{1}{l|}{Video Compression} & \multicolumn{1}{c|}{3793 G}            & 22130 sec      \\ \hline
+    \end{tabular}
+    \caption*{This table is taken from \cite{1}.}
+\end{table}
+Table 1 shows some of the SPEC CPU benchmark programs that we can use to assess
+the execution performance of different computational processors.
+\section*{Newton’s Law of Universal Gravitation}
+Newton’s law of universal gravitation states that any two particles in this universe attract
+each other with a force that is proportional to the product of their masses and inversely
+proportional to the square of the distance between their centers. This is one of the founda-
+tional laws in classical physics that was first described and formulated in Sir Isaac Newton’s
+famous \textit{Principia} book \cite{2}.
+\\
+
+The equation takes the form $F_g = G\frac{m_1m_2}{r^2}$ or $F_{ab} = -G\frac{m_am_b}{|r_{ab}|^2}\hat{r}_{ab}$ among many other
+forms.
+\section*{Display This Section Too!}
+You need to display this section in your output PDF file. This section contains information
+that may help you prepare the bibliography section.
+\begin{enumerate}
+    \item \textbf{Citation about SPEC CPU Benchmark}
+    \begin{itemize}
+        \item \textbf{Authors:} David A. Patterson, John L. Hennessy
+        \item \textbf{Title:} Computer Organization and Design MIPS Edition
+        \item \textbf{Publisher:} Morgan Kaufmann
+        \item \textbf{Year:} 2013
+        \item \textbf{Edition:} 5th
+    \end{itemize}
+    \item \textbf{Citation about Universal Gravitation}
+    \begin{itemize}
+        \item \textbf{Author:} Isaac Newton
+        \item \textbf{Title:} Philosophiae Naturalis Principia Mathematica
+        \item \textbf{Publisher:} Jussu Societatis Regiae ac Typis Josephi Streater
+        \item \textbf{Year:} 1687
+    \end{itemize}
+\end{enumerate}
+\printbibliography
+\end{document}

@@ -1,0 +1,65 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{1}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=d62582a3fb2e5bc4d43c31c9b961f0ca}{%
+           family={Graham},
+           familyi={G\bibinitperiod},
+           given={R.\bibnamedelimi L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=c7986b8f9a74e8a99dd8346c98b35f3e}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={D.\bibnamedelimi E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=cf17805730414144a332a12b81ebad4d}{%
+           family={Patashnik},
+           familyi={P\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{6bb5491b813ade21c037297b5a291d69}
+      \strng{fullhash}{f175be1c2e51ac99852a036803fcbe34}
+      \strng{fullhashraw}{f175be1c2e51ac99852a036803fcbe34}
+      \strng{bibnamehash}{f175be1c2e51ac99852a036803fcbe34}
+      \strng{authorbibnamehash}{f175be1c2e51ac99852a036803fcbe34}
+      \strng{authornamehash}{6bb5491b813ade21c037297b5a291d69}
+      \strng{authorfullhash}{f175be1c2e51ac99852a036803fcbe34}
+      \strng{authorfullhashraw}{f175be1c2e51ac99852a036803fcbe34}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{title}{Concrete Mathematics: A Foundation for Computer Science}
+      \field{year}{1994}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
