@@ -1,5 +1,7 @@
-\documentclass{beamer}
+\documentclass[aspectratio=1610]{beamer}
 
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage{pgfplots}
 \usepackage{subcaption}
@@ -14,18 +16,374 @@
 \pgfplotsset{compat=1.18}
 
 \usetheme{Boadilla}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{bg=blue, fg=white}
+\setbeamertemplate{footline}[frame number]
 
-\usetheme{Boadilla}
-\title{Fourier Transformation}
-\subtitle{Welcome To The World of Signals}
-\author{Gourove Roy}
-\institute{Department of CSE, BUET}
+\title[Fourier Transform]{Fourier Transform}
+\subtitle{Decoding the Hidden Language of Signals}
+\author{Md junaid ahmmad, Gourove Roy, Sadrul Islam Faysal}
 \date{\today}
 
 \begin{document}
 
 \begin{frame}
     \titlepage
+\end{frame}
+
+\begin{frame}{Table Of Content}
+    \begin{center}
+        \vspace{0.5cm}
+        \begin{itemize}[]
+            \item[\textcolor{blue}{1.}] The Smoothie Analogy
+                \begin{itemize}
+                    \item From Smoothie to Recipe
+                    \item Using Filters
+                \end{itemize}
+            \vspace{0.3cm}
+            
+            \item[\textcolor{blue}{2.}] From Smoothies to Signals
+                \begin{itemize}
+                    \item Drawing the Parallel
+                    \item Understanding the Transformation
+                \end{itemize}
+            \vspace{0.3cm}
+            
+            \item[\textcolor{blue}{3.}] Building with Fourier Components
+                \begin{itemize}
+                    \item Component Signals
+                    \item Frequency Analysis
+                \end{itemize}
+            \vspace{0.3cm}
+            
+            \item[\textcolor{blue}{4.}] Understanding Sine and Cosine
+                \begin{itemize}
+                    \item Why Both Are Needed
+                    \item Complete Representation
+                \end{itemize}
+        \end{itemize}
+    \end{center}
+\end{frame}
+
+\begin{frame}{The Smoothie Analogy}
+    \begin{center}
+        \vspace{0.3cm}
+        {\Large{Given a \textcolor{red}{Smoothie} , lets find its \textcolor{red}{Recipe}}}
+        
+        \vspace{0.6cm}
+        \begin{tikzpicture}
+            \only<1-2>{
+                \node (smoothie) at (-3,0) {\includegraphics[width=0.4\textwidth]{smoothie.jpeg}};
+            }
+            
+            \only<2>{
+                \draw[->, thick, blue!70, line width=2pt] (0,0) -- (2,0);
+                \node[above] at (1,0.3) {\textcolor{blue}{Analysis}};
+            }
+            
+            \only<2>{
+                \node (recipe) at (5,0) {\includegraphics[width=0.4\textwidth]{recipe.jpeg}};
+            }
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+\begin{frame}{How Can We Do That?}
+    \begin{center}
+        \vspace{0.1cm}
+        {\Large Extracting the \textcolor{red}{recipe} using \textcolor{red}{filters}}
+        \vspace{0.7cm}
+        
+        \begin{tikzpicture}[
+            box/.style={draw, rounded corners, minimum width=2.5cm, minimum height=0.8cm},
+            arrow/.style={->, thick, >=latex, draw=gray!60}
+        ]
+            % Smoothie on left
+            \node[box, fill=orange!20, minimum width=2.8cm] (smoothie) at (-4,0) {Smoothie};
+            
+            % Filters in middle
+            \node[box, fill=green!10] (banana) at (0,2) {Banana Filter};
+            \node[box, fill=green!10] (orange) at (0,0) {Orange Filter};
+            \node[box, fill=green!10] (milk) at (0,-2) {Milk Filter};
+            
+            % Amounts on right
+            \node[box, fill=blue!10] (bamount) at (4,2) {Banana Amount};
+            \node[box, fill=blue!10] (oamount) at (4,0) {Orange Amount};
+            \node[box, fill=blue!10] (mamount) at (4,-2) {Milk Amount};
+            
+            % Connecting arrows from same point
+            \coordinate (split) at (-2.5,0);
+            \draw[arrow] (smoothie.east) -- (split);
+            \draw[arrow] (split) -- (banana.west);
+            \draw[arrow] (split) -- (orange.west);
+            \draw[arrow] (split) -- (milk.west);
+            
+            \draw[arrow] (banana) -- (bamount);
+            \draw[arrow] (orange) -- (oamount);
+            \draw[arrow] (milk) -- (mamount);
+            
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{From Smoothies to Signals}
+    \begin{center}
+        \begin{tikzpicture}[
+            box/.style={draw, rounded corners, minimum width=2.5cm, minimum height=0.8cm},
+            arrow/.style={->, thick, >=latex, draw=gray!60},
+            label/.style={font=\Large}
+        ]
+            % Title
+            \node[label] at (0,3) {\textcolor{blue}{Analogy}};
+            
+            % Left column - Smoothie concepts
+            \node[box, fill=green!10] (smoothie) at (-3,2) {Smoothie};
+            \node[box, fill=green!10] (ingredient) at (-3,0) {Ingredient};
+            \node[box, fill=green!10] (amount) at (-3,-2) {Amount};
+            
+            % Right column - Signal concepts
+            \node[box, fill=blue!10] (signal) at (3,2) {Signal};
+            \node[box, fill=blue!10] (frequency) at (3,0) {Frequency};
+            \node[box, fill=blue!10] (amplitude) at (3,-2) {Amplitude};
+            
+            % Connect related concepts with centered arrows
+            \draw[arrow] (smoothie.east) -- (signal.west);
+            \draw[arrow] (ingredient.east) -- (frequency.west);
+            \draw[arrow] (amount.east) -- (amplitude.west);      
+        \end{tikzpicture}
+    \end{center}
+    \Large{And the whole \textcolor{red}{transformation} process is identical to \textcolor{red}{Fourier transform}. }
+\end{frame}
+
+
+\begin{frame}{Building a Signal: Fourier Components}
+    \begin{tikzpicture}
+        % Left plot (Component signals)
+        \begin{scope}[shift={(-3,0)}, scale=0.9]
+            % Grid and axes
+            \draw[gray!20, step=1] (-0.5,-2) grid (7,2);
+            \draw[thick, ->] (-0.5,0) -- (7,0) node[below] {Time};
+            \draw[thick, ->] (0,-2) -- (0,2) node[left] {};
+            \node[above] at (3.5, 2.5) {\textbf{Components}};
+            
+            \only<1>{
+                \draw[blue, thick, domain=0:6.5, samples=100] plot (\x, {sin(\x r)});
+                \draw[blue, thick] (5.5,1) node {$f_1 = 1$ Hz};
+            }
+            \only<2>{
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {sin(\x r)});
+                \draw[blue, thick, domain=0:6.5, samples=100] plot (\x, {0.5*sin(2*\x r)});
+                \draw[blue, thick] (5.5,1) node {$f_2 = 2$ Hz};
+            }
+            \only<3>{
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {sin(\x r)});
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {0.5*sin(2*\x r)});
+                \draw[blue, thick, domain=0:6.5, samples=100] plot (\x, {0.3*sin(3*\x r)});
+                \draw[blue, thick] (5.5,1) node {$f_3 = 3$ Hz};
+            }
+            \only<4>{
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {sin(\x r)});
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {0.5*sin(2*\x r)});
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {0.3*sin(3*\x r)});
+                \draw[blue, thick, domain=0:6.5, samples=100] plot (\x, {0.2*sin(4*\x r)});
+                \draw[blue, thick] (5.5,1) node {$f_4 = 4$ Hz};
+            }
+            \only<5>{
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {sin(\x r)});
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {0.5*sin(2*\x r)});
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {0.3*sin(3*\x r)});
+                \draw[blue!30, thick, domain=0:6.5, samples=100] plot (\x, {0.2*sin(4*\x r)});
+                \draw[blue, thick, domain=0:6.5, samples=100] plot (\x, {0.1*sin(5*\x r)});
+                \draw[blue, thick] (5.5,1) node {$f_5 = 5$ Hz};
+            }
+        \end{scope}
+
+        % Right plot (Combined signal)
+        \begin{scope}[shift={(4.5,0)}, scale=0.9]
+            \draw[gray!20, step=1] (-0.5,-2) grid (7,2);
+            \draw[thick, ->] (-0.5,0) -- (7,0) node[below] {Time};
+            \draw[thick, ->] (0,-2) -- (0,2) node[left] {};
+            \node[above] at (3.5, 2.5) {\textbf{Combined Signal}};
+            
+            % Combined signals
+            \only<1>{\draw[red, thick, domain=0:6.5, samples=100] 
+                plot (\x, {sin(\x r)});}
+            \only<2>{\draw[red, thick, domain=0:6.5, samples=100] 
+                plot (\x, {sin(\x r) + 0.5*sin(2*\x r)});}
+            \only<3>{\draw[red, thick, domain=0:6.5, samples=100] 
+                plot (\x, {sin(\x r) + 0.5*sin(2*\x r) + 0.3*sin(3*\x r)});}
+            \only<4>{\draw[red, thick, domain=0:6.5, samples=100] 
+                plot (\x, {sin(\x r) + 0.5*sin(2*\x r) + 0.3*sin(3*\x r) + 0.2*sin(4*\x r)});}
+            \only<5>{\draw[red, thick, domain=0:6.5, samples=100] 
+                plot (\x, {sin(\x r) + 0.5*sin(2*\x r) + 0.3*sin(3*\x r) + 0.2*sin(4*\x r) + 0.1*sin(5*\x r)});}
+        \end{scope}
+
+        % Explanatory text
+        \node[text width=12cm] at (4,-3) {
+            \only<1>{Starting with the fundamental frequency}
+            \only<2>{Adding the second harmonic}
+            \only<3>{Adding the third harmonic}
+            \only<4>{Adding the fourth harmonic}
+            \only<5>{Final signal with five components}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Fourier Transform Analysis}
+    \begin{center}
+        \hspace{-1cm}
+        \includegraphics[width=1.1\textwidth]{freq_spectrum.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{How Fourier Transform Detects Frequencies}
+    \begin{center}
+        \vspace{0.3cm}
+        \begin{tikzpicture}[scale=1.2]
+            \draw[->] (-4,0) -- (4,0) node[right] {\small Time};
+            \draw[->] (0,-1.5) -- (0,1.5) node[above] {\small Amplitude};
+            
+            \only<1-2> {
+                \draw[thick, blue, domain=-4:4, samples=100] 
+                    plot (\x, {sin(360 * \x / 8)}); 
+                \draw[blue, thick] (4.5,1) node {$f_1 = 0.125$ Hz};
+            }
+            
+            \only<2> {
+                \draw[thick, red, domain=-4:4, samples=100, dashed] 
+                    plot (\x, {sin(360 * \x / 5)}); 
+                \draw[red, thick] (4.5,0.5) node {$f_2 = 0.500$ Hz};
+            }
+            
+            \only<3> {
+                \fill[purple!20, opacity=0.5] 
+                    plot[domain=-4:4, samples=100] 
+                    (\x, {sin(360 * \x / 8) * sin(360 * \x / 5)}) -- 
+                    (4,0) -- (-4,0) -- cycle;
+                \draw[thick, purple, domain=-4:4, samples=100] 
+                    plot (\x, {sin(360 * \x / 8) * sin(360 * \x / 5)});
+                \node[align=center, below=0.8cm, text=purple] at (0, -1) 
+                    {\textbf{Area under curve = 0}};
+            }
+            
+            \only<4> {
+                \draw[thick, blue, domain=-4:4, samples=100] 
+                    plot (\x, {sin(360 * \x / 8)}); 
+                \draw[thick, red, domain=-4:4, samples=100,dashed] 
+                    plot (\x, {sin(360 * \x / 8)}); 
+                \draw[blue, thick] (4.5,1) node {$f_1 = 0.125$ Hz};
+                \draw[red, thick] (4.5,0.5) node {$f_1 = 0.125$ Hz};
+            }
+            
+            \only<5> {
+                \fill[purple!20, opacity=0.5] 
+                    plot[domain=-4:4, samples=100] 
+                    (\x, {sin(360 * \x / 8) * sin(360 * \x / 8)}) -- 
+                    (4,0) -- (-4,0) -- cycle;
+                \draw[thick, purple, domain=-4:4, samples=100] 
+                    plot (\x, {sin(360 * \x / 8) * sin(360 * \x / 8)});
+                \node[align=center, below=0.8cm, text=purple] at (0, -1) 
+                    {\textbf{Area under curve > 0 (Correlation)}};
+            }
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Frequency Domain Representation}
+    \begin{center}
+        \vspace{0.3cm}
+        \begin{tikzpicture}[scale=1.2]
+            \draw[->] (-0.5,0) -- (4,0) node[right] {\small Frequency (Hz)};
+            \draw[->] (0,-0.2) -- (0,1.5) node[above] {\small Magnitude};
+            
+            \foreach \x/\xtext in {0.125/0.125, 1/1.0, 2/2.0, 3/3.0}
+                \draw (\x,0.1) -- (\x,-0.1) node[below] {\small \xtext};
+            
+            \draw[thick, red] (0.125,0) -- (0.125,1);
+            \draw[thick, blue] (0.125,1) -- (0.125,1) node[above] {1};
+            
+            \foreach \x in {0.5,1,1.5,2,2.5,3}
+                \draw[thick, blue] (\x,0.05) -- (\x,-0.05);
+                
+            \node[align=center] at (2,-1.2) 
+                {\textbf{Single frequency component at $f=0.125$ Hz}};
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Why We Need Both Sine and Cosine Terms}
+    \begin{center}
+        \vspace{0.3cm}
+        \begin{tikzpicture}[scale=1.2]
+            \draw[->] (-4,0) -- (4,0) node[right] {\small Time};
+            \draw[->] (0,-1.5) -- (0,1.5) node[above] {\small Amplitude};
+            
+            \only<1,2,4>{
+                \draw[thick, blue, domain=-4:4, samples=100] 
+                    plot (\x, {cos(360 * \x / 8)}); 
+                \draw[blue, thick] (4.5,1) node {Target: $\cos(2\pi t)$};
+            }
+            
+            \only<2>{
+                \draw[thick, red, domain=-4:4, samples=100, opacity=0.5] 
+                    plot (\x, {sin(360 * \x / 8)}); 
+                \draw[red, thick] (4.5,0.5) node {Attempt: $\sin(2\pi t)$};
+            }
+
+            \only<3> {
+                \fill[purple!20, opacity=0.5] 
+                    plot[domain=-4:4, samples=1000] 
+                    (\x, {cos(360 * \x /8) * sin(360 * \x/8 )}) -- 
+                    (4,0) -- (-4,0) -- cycle;
+                \draw[thick, purple, domain=-4:4, samples=1000] 
+                    plot (\x, {cos(360 * \x /8) * sin(360 * \x/8 )});
+                \node[align=center, below=0.8cm, text=purple] at (0, -1) 
+                    {\textbf{Area under curve = 0}};
+            }
+            
+            \only<4>{
+                \draw[thick, red, domain=-4:4, samples=100, opacity=0.5] 
+                    plot (\x, {sin(360 * \x / 8)});
+                \draw[thick, blue, domain=-4:4, samples=100, opacity=0.5] 
+                    plot (\x, {0.5*sin(720 * \x / 8)});
+                \draw[thick, green, domain=-4:4, samples=100, opacity=0.5] 
+                    plot (\x, {0.25*sin(1080 * \x / 8)});
+                \node[align=center] at (0,-2) 
+                    {\textbf{Cannot match cosine with}\\
+                     \textbf{any combination of sines}};
+            }
+            
+            \only<5>{
+                \draw[thick, blue, domain=-4:4, samples=100, opacity=0.8] 
+                    plot (\x, {cos(360 * \x/8 )}); 
+                \draw[thick, red, domain=-4:4, samples=100,dashed, opacity=1] 
+                    plot (\x, {cos(360 * \x/8 )}); 
+                \draw[blue, thick] (4.5,1) node {Target: $\cos(2\pi t)$};
+                \draw[red, thick] (4.5,0.5) node {Attempt: $\cos(2\pi t)$};
+                \node[align=center] at (0,-2) 
+                    {$f(t) = a_0 + \sum\limits_{n=1}^{\infty} (a_n\cos(2\pi nt) + b_n\sin(2\pi nt))$};
+            }
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Why Fourier Transform?}
+    \begin{itemize}
+        \item<1-> Analyze and simplify complex signals like audio, images, and communication data.
+        \item<2-> Break signals into fundamental sine and cosine components.
+        \item<3-> Applications in:
+        \begin{itemize}
+            \item Audio processing (e.g., equalizers, compression).
+            \item Medical imaging (e.g., MRIs).
+            \item Image compression (e.g., JPEGs).
+        \end{itemize}
+    \end{itemize}
+    \pause
+    % \includegraphics[width=0.8\textwidth]{example_signal.png}
+\end{frame}
+
+\begin{frame}
+\textcolor{green}{\textbf{Fourier transform and it's properties}}
 \end{frame}
 
 \begin{frame}
@@ -1048,12 +1406,12 @@
                             height=5cm,
                             width=6cm
                         ]
-                        \addplot[
-                            domain=-10:10,
-                            samples=1000,
-                            thick,
-                            red
-                        ] {abs(sin(deg(pi*x))/(pi*x)/(2*pi))} node[pos=0.75, above] {};
+                            \addplot[
+                                domain=-10:10,
+                                samples=1000,
+                                thick,
+                                red
+                            ] {abs(sin(deg(pi*x))/(pi*x)/(2*pi))} node[pos=0.75, above] {};
                         \end{axis}
                     \end{tikzpicture}
                     \caption{$\mathcal{F} \{y(t)\}$}
@@ -1299,6 +1657,302 @@
             \hline
         \end{tabular}
     \end{table}
+    \footnote{https://www.philadelphia.edu.jo/academics/qhamarsheh/uploads/Lecture}
 \end{frame}
 
+\begin{frame}
+    \textcolor{green}{\textbf{Application of Fourier transform}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Application of Fourier Transform include}
+    \begin{itemize}[label=$\star$, itemsep=7pt, parsep=0pt, topsep=10pt]
+      \item<1-> Signal Processing
+      \item<2-> Image Processing
+      \item<3-> Filtering: 
+          \begin{itemize}
+              \item<4-> High Pass Filter 
+              \item<5-> Low Pass Filter 
+              \item<6-> Band Pass Filter
+              \item <7-> Band Reject Filter
+          \end{itemize}
+      \item<8-> Audio Processing
+      \item<9-> Reducing Noise
+      \item<10-> Telecommunications
+      \item<12-> Representing wave propagation
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transform: \textcolor{yellow}{Signal Processing}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> \textbf{\textcolor{red}{Signal Decomposing into Frequencies Components}}
+    \end{itemize}
+     \begin{tikzpicture}
+          \begin{axis}[
+              title={Square Wave and Accumulated Sum of Frequency Components},
+              xlabel={$x$},
+              ylabel={$y$},
+              grid=both,
+              legend style={at={(0.5,-0.2)}, anchor=north, legend columns=-1},
+              width=10cm,
+              height=6cm
+          ]
+              % Square wave (Ideal target)
+              \addplot[domain=0:8, samples=500, thick, black] 
+               {mod(abs(x), 4) < 2 ? 1 : -1};
+              % \addlegendentry{Square Wave}
+  
+              % Accumulated Fourier components
+              \addplot[domain=0:8, samples=500, thick, red] 
+                 {4/pi * (sin(deg(pi*x/2)) + 1/3*sin(deg(3*pi*x/2)) + 1/5*sin(deg(5*pi*x/2)) + 1/7*sin(deg(7*pi*x/2)) + 1/9*sin(deg(9*pi*x/2)))};
+              % \addlegendentry{Accumulated Sum (5 terms)}
+              \addlegendentry{Square Wave}
+              \addlegendentry{Accumulated Sum}
+          \end{axis}
+      \end{tikzpicture}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transform: \textcolor{yellow}{Signal Processing}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> \textbf{\textcolor{red}{Signal Decomposing into Frequencies Components}}
+    \end{itemize}
+    \begin{tikzpicture}
+          \begin{axis}[
+              title={Individual Frequency Components},
+              xlabel={$x$},
+              ylabel={$y$},
+              grid=both,
+              width=10cm,
+              height=5cm,
+              legend style={at={(0.5,-0.2)}, anchor=north, legend columns=3}
+          ]
+              % Individual sinusoidal components
+              \addplot[domain=-2*pi:2*pi, samples=500, thick, blue] 
+                  {4/pi * sin(deg(x))};
+              \addlegendentry{Term 1}
+  
+              \addplot[domain=-2*pi:2*pi, samples=500, thick, green] 
+                  {4/(3*pi) * sin(deg(3*x))};
+              \addlegendentry{Term 3}
+  
+              \addplot[domain=-2*pi:2*pi, samples=500, thick, orange] 
+                  {4/(5*pi) * sin(deg(5*x))};
+              \addlegendentry{Term 5}
+  
+              \addplot[domain=-2*pi:2*pi, samples=500, thick, purple] 
+                  {4/(7*pi) * sin(deg(7*x))};
+              \addlegendentry{Term 7}
+  
+              \addplot[domain=-2*pi:2*pi, samples=500, thick, cyan] 
+                  {4/(9*pi) * sin(deg(9*x))};
+              \addlegendentry{Term 9}
+          \end{axis}
+      \end{tikzpicture}
+  \end{frame}
+  
+  \begin{frame}
+     \frametitle{Application of Fourier Transform: \textcolor{yellow}{Signal Processing}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> \textbf{\textcolor{red}{Signal Decomposing into Frequencies Components}}
+    \end{itemize}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/freqSpectrum.png}
+        \caption{Frequency spectrum of square signal}
+        \label{fig:enter-label}
+    \end{figure}  
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transform: \textcolor{yellow}{Filtering}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> Filter:  \textbf{\textcolor{red}{Low Pass Filter}}
+    \end{itemize}
+    \vspace{-10pt}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth,height=0.5\linewidth]{images/lowPassFilter.png}
+        \caption{Low pass filtered signal of a noisy signal}
+        \label{fig:enter-label}
+    \end{figure}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transform: \textcolor{yellow}{Filtering}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> Filter:  \textbf{\textcolor{red}{High Pass Filter}}
+    \end{itemize}
+    \vspace{-10pt}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth,height=0.5\linewidth]{images/highPassFilter.png}
+        \caption{High pass filtered signal of a noisy signal}
+        \label{fig:enter-label}
+    \end{figure}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transform: \textcolor{yellow}{Filtering}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> Filter:  \textbf{\textcolor{red}{Band Pass Filter}}
+    \end{itemize}
+    \vspace{-10pt}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth,height=0.5\linewidth]{images/bandPassSignal.png}
+        \caption{Band pass filtered signal of a noisy signal}
+        \label{fig:enter-label}
+    \end{figure}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transform: \textcolor{yellow}{Filtering}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> Filter:  \textbf{\textcolor{red}{Band Reject Filter}}
+    \end{itemize}
+    \vspace{-10pt}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth,height=0.5\linewidth]{images/bandRejectSignal.png}
+        \caption{Band reject filtered signal of a noisy signal}
+        \label{fig:enter-label}
+    \end{figure}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transform: \textcolor{yellow}{Image Processing}}
+    \begin{itemize}[label=$\star$, itemsep=7pt, parsep=0pt, topsep=10pt]
+       \item<1-> \textbf{\textcolor{red}{Frequency Analysis}} 
+           \begin{itemize} [label=$\bullet$, itemsep=7pt, parsep=0pt, topsep=10pt]
+               \item<2-> FT separates \textcolor{red}{high-frequency} components from \textcolor{red}{low-frequency} components. This helps in analyzing \textcolor{blue}{image characteristics}
+           \end{itemize}
+    \end{itemize}
+    \vspace{10pt}
+    \begin{figure}
+        \centering
+        \includegraphics[width = 0.7\textwidth]{images/lowFreqHighFreq.png}
+        \caption{From right to left: Original image, Low-frequency components, High frequency components,Fourier transform}
+    \end{figure}
+    \vfill 
+    \tiny \textit{Image source:} \url{https://www.researchgate.net/figure/sualization-of-low-frequency-components-high-frequency-components-and-Fourier-spectrums_fig2_347515196} 
+  \end{frame}
+  
+  \begin{frame}
+     \frametitle{Application of Fourier Transform: \textcolor{yellow}{Image Processing}}
+     \begin{itemize}[label=$\star$, itemsep=7pt, parsep=0pt, topsep=10pt]
+     \item<1-> \textbf{\textcolor{red}{Compression}}
+    \end{itemize} 
+    \vspace{-10pt}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{images/imageCmp2.png}
+        \caption{JPEG Transform compression}
+        \label{fig:enter-label}
+    \end{figure}
+    \vfill 
+    \tiny \textit{Image source:}
+    \url{https://www.dspguide.com/ch27/6.htm}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transformation: \textcolor{yellow}{Image Processing}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> \textbf{\textcolor{red}{Image Reconstruction}}
+    \end{itemize}
+    \vspace{5pt}
+    \hspace{20pt}
+    \begin{tikzpicture}
+          % Node for the first figure
+          \node<1->[anchor=center] (fig1) at (0,1) {\includegraphics[width=4cm,height=4cm]{images/kSpaceSignal.png}};
+  
+          \draw<2->[->, thick, red] (fig1.east) -- ++(2, 0)
+               node[midway, above=5pt] {\tiny Inverse Fourier Transform};
+          
+          % Node for the second figure
+          \node<3->[anchor=center] (fig2) at (7, 1) {\includegraphics[width=4cm,height=4cm]{images/positionSpaceSignal.png}};
+          
+    \end{tikzpicture}
+     \begin{center}
+       \scriptsize \textcolor{blue}{Figure:} Fourier transform in \textcolor{red}{Medical Imaging}
+    \end{center}
+    \vfill 
+    \tiny \textit{Image source:}
+    \url{https://www.researchgate.net/figure/A-a-Fourier-transform-is-applied-to-the-q-space-images-to-reconstruct-the-image-in-the_fig12_281047295}
+  \end{frame}
+  
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transformation: \textcolor{yellow}{Image Processing}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> \textbf{\textcolor{red}{Image Reconstruction}}
+    \end{itemize}
+    \vspace{-5pt}
+    \hspace{20pt}
+    \begin{tikzpicture}
+          % Node for the first figure
+          \node<1->[anchor=center] (fig1) at (0,1) {\includegraphics[width=3cm,height=5cm]{images/mri1.png}};
+          
+          % Node for the second figure
+          \node<3->[anchor=center] (fig2) at (5.5, 1) {\includegraphics[width=3cm,height=5cm]{images/mri2.png}};
+  
+          % Arrow from middle of fig1 to fig2
+          \draw<2->[->, thick, red] (fig1.east) -- (fig2.west)
+               node[midway, above=5pt] {\tiny 2D Inverse Fourier Transform};
+          
+          % Arrow from middle of fig1 to fig2
+          \draw<2->[->, thick, red] (fig1.east) -- (fig2.west)
+               node[midway, below=5pt] {\tiny Inverse Fourier Transform};
+          
+    \end{tikzpicture}
+     \begin{center}
+       \scriptsize \textcolor{blue}{Figure:} Fourier Reconstruction in \textcolor{red}{MRI}
+    \end{center}
+    \vfill 
+    \tiny \textit{Image source:}
+    \url{https://link.springer.com/chapter/10.1007/978-3-030-30511-6_9}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transformation: \textcolor{yellow}{Audio Processing}}
+    \begin{itemize} [label=$\star$, itemsep=4pt, parsep=0pt, topsep=10pt]
+        \item<1-> \textbf{\textcolor{red}{Removing Noise} } 
+    \end{itemize}
+    \vspace{5pt}
+    \hspace{25pt}
+    \begin{tikzpicture}
+          % Node for the first figure
+          \node<1->[anchor=center] (fig1) at (0, 0) {\includegraphics[width=4cm,height=3cm]{images/noisySignal.png}};
+  
+          \draw<2->[->, thick, red] (fig1.east) -- ++(2, 0)
+               node[midway, above=5pt] {\tiny Fourier Transform};
+          
+          % Node for the second figure
+          \node<3->[anchor=center] (fig2) at (7, 0) {\includegraphics[width=4cm,height=3cm]{images/denoisedAudio.png}};
+          
+    \end{tikzpicture}
+     \begin{center}
+       \scriptsize \textcolor{blue}{Figure:} Comparison of \textcolor{red}{Noisy} and \textcolor{red}{Denoised} Signal Using Fourier Transform
+    \end{center}
+    \vfill 
+    \tiny \textit{Image source:}
+    \url{https://www.numerical-tours.com/matlab/audio_1_processing/}  
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Application of Fourier Transformation: \textcolor{yellow}{Audio Processing}}
+    \begin{itemize} [label=$\star$, itemsep=7pt, parsep=0pt, topsep=10pt]
+        \item<1-> Equalization
+        \item <2-> Pitch shifting and time stretching
+        \item <3-> Sound synthesis
+        \item <4-> Audio effects
+        \item <5-> Real time audio processing:
+            \begin{itemize}[label=$\bullet$, itemsep=7pt, parsep=0pt, topsep=10pt]
+                \item<6-> Live Sound Enhancement
+                \item<7-> Interactive Audio
+            \end{itemize}
+        \item <8-> Audio Fingerprinting
+    \end{itemize} 
+  \end{frame}
 \end{document}

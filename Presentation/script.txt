@@ -1,0 +1,62 @@
+frame 1
+Fourier transform is a mathematical model that decomposes a function or signal into its constituent frequencies.
+
+frame 2
+In this presentation, we will explore the Fourier transform in detail along with its type,
+forward and inverse Fourier transform, example, and its properties.
+
+frame 3
+Both are used to decompose a function or signal from one domain to another domain.
+
+frame 4
+The forward Fourier transform is used to
+transform a time-domain signal into its frequency-domain representation.
+The formula is integration of the time-domain signal multiplied by
+exponent of -j omega t with limit of - infinite to infinite
+where omega is the angular frequency and j is the imaginary unit.
+
+frame 5
+The inverse Fourier transform is the reverse process of forward fourier transform
+which converts a frequency-domain signal into its time-domain form.
+Its formula is integration of the frequency-domain signal multiplied by exponent of j omega t with limit of - infinite to infinite.
+
+frame 6
+Usually the fourier transform of a signal is represented as script F
+which is the fourier transform operator and the inverse Fourier transform operator is inverse script F.
+An important note is that inverse fourier transform of a fourier transformed signal gives back the time-domain signal.
+
+frame 7
+Here is an example of fourier transform where rect(t) is a rectangular pulse in time-domain and
+sinc(omega) is a frequency-domain signal.
+
+frame 8
+Then the forward Fourier transform of rect(t) is sinc(ω), the red colored graph and the inverse Fourier
+transform of sinc(ω) is rect(t), the blue colored graph.
+
+frame 9
+Now we will see some properties among various properties of fourier transform.
+
+frame 10
+The first is linearity property.
+
+It describes that the Fourier transform of a linear combination of signals is the same linear combination of their individual Fourier transforms.
+
+From now, for every property, we will use these two signals as example.
+
+Fourier transform of 2 multiplied by rect(t) is equal to the 2 multiplied by fourier transform of rect(t)
+
+Again, Fourier transform of 3 multiplied by rect(t) is equal to the 3 multiplied by fourier transform of rect(t)
+
+So Fourier transform of a linear combination of rectangular pulses is the same linear combination of their individual Fourier transforms.
+
+2nd comes the time shifting property
+
+According to this property, time shift in time domain generates phase shift in frequency domain.
+
+Let take an example of the time shifted signal rect(t - 1)
+its corresponding phase shifted signal is sinc(omega) multiplied by exponent of -j omega
+
+The phase shift is proportional to omega
+The factor −1 indicates that the phase shift is negative, corresponding to a delay in the time domain by 1 unit.
+
+Scaling a signal in the time domain results in an inverse scaling in the frequency domain.

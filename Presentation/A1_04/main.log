@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.18)  1 DEC 2024 11:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.18)  1 DEC 2024 14:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/User/OneDrive - BUET/BOOKS 2-2/CSE 200/Presentation/FT.tex"
-(c:/Users/User/OneDrive - BUET/BOOKS 2-2/CSE 200/Presentation/FT.tex
+**"c:/Users/User/OneDrive - BUET/BOOKS 2-2/CSE 200/Presentation/Group_04/main.tex"
+(c:/Users/User/OneDrive - BUET/BOOKS 2-2/CSE 200/Presentation/Group_04/main.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
@@ -534,7 +534,9 @@ Package: amsthm 2020/05/29 v2.20.6
 ) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasethemes.sty)) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerthemedefault.sty (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfontthemedefault.sty) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthemedefault.sty) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnerthemedefault.sty
 \beamer@dima=\dimen293
 \beamer@dimb=\dimen294
-) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthemedefault.sty))) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthemedefault.sty))) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip66
 \enit@outerparindent=\dimen295
@@ -684,27 +686,43 @@ Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count366
 \l__pdf_internal_box=\box86
-) (FT.aux)
-\openout1 = `FT.aux'.
+) (main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -714,14 +732,14 @@ LaTeX Font Info:    ... okay on input line 25.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(10.95003pt, 342.2953pt, 10.95003pt)
-* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
-* \paperwidth=364.19536pt
-* \paperheight=273.14662pt
-* \textwidth=342.2953pt
-* \textheight=244.6939pt
-* \oddsidemargin=-61.31996pt
-* \evensidemargin=-61.31996pt
+* h-part:(L,W,R)=(10.88002pt, 433.48404pt, 10.88002pt)
+* v-part:(T,H,B)=(0.0pt, 284.52756pt, 0.0pt)
+* \paperwidth=455.24408pt
+* \paperheight=284.52756pt
+* \textwidth=433.48404pt
+* \textheight=256.07483pt
+* \oddsidemargin=-61.38997pt
+* \evensidemargin=-61.38997pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -759,60 +777,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 25.
- (FT.out) (FT.out)
+Package hyperref Info: Link coloring OFF on input line 28.
+ (main.out) (main.out)
 \@outlinefile=\write5
-\openout5 = `FT.out'.
+\openout5 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 25.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 28.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 25.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 28.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 25.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 28.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 25.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 25.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 28.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 25.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 25.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 28.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 25.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 25.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 28.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 25.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 25.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 28.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 25.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 28.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 25.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 25.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 25.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 25.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 25.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 25.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 25.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 28.
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `pureletters' in the math version `normal' on input line 28.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 25.
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 28.
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `pureletters' in the math version `bold' on input line 28.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 25.
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 28.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 25.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 28.
  (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-bibliography-dictionary-English.dict
@@ -830,41 +852,47 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(FT.nav)
+(main.nav)
 
 [1
 
 {C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<images/time_freq_domain.png, id=47, 803.0pt x 301.125pt>
-File: images/time_freq_domain.png Graphic file (type png)
-<use images/time_freq_domain.png>
-Package pdftex.def Info: images/time_freq_domain.png  used on input line 40.
-(pdftex.def)             Requested size: 308.06367pt x 115.52684pt.
-
 
 [2
 
- <./images/time_freq_domain.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
- (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
- (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 53.
- (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-)
+]
+<smoothie.jpeg, id=26, 84.315pt x 118.041pt>
+File: smoothie.jpeg Graphic file (type jpg)
+<use smoothie.jpeg>
+Package pdftex.def Info: smoothie.jpeg  used on input line 89.
+(pdftex.def)             Requested size: 173.39096pt x 242.75287pt.
+
+Overfull \vbox (59.59634pt too high) detected at line 89
+ []
+
+
 
 [3
 
-]
+ <./smoothie.jpeg>]
+File: smoothie.jpeg Graphic file (type jpg)
+<use smoothie.jpeg>
+Package pdftex.def Info: smoothie.jpeg  used on input line 89.
+(pdftex.def)             Requested size: 173.39096pt x 242.75287pt.
+<recipe.jpeg, id=32, 652.4375pt x 816.04875pt>
+File: recipe.jpeg Graphic file (type jpg)
+<use recipe.jpeg>
+Package pdftex.def Info: recipe.jpeg  used on input line 89.
+(pdftex.def)             Requested size: 173.39096pt x 216.87448pt.
+
+Overfull \vbox (59.59634pt too high) detected at line 89
+ []
+
+
 
 [4
 
-]
+ <./recipe.jpeg>]
 
 [5
 
@@ -873,6 +901,18 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 [6
 
 ]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 230.
+ (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 230.
+ (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 230.
+ (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
+)
 
 [7
 
@@ -893,10 +933,25 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 [11
 
 ]
+<freq_spectrum.png, id=78, 867.24pt x 433.62pt>
+File: freq_spectrum.png Graphic file (type png)
+<use freq_spectrum.png>
+Package pdftex.def Info: freq_spectrum.png  used on input line 237.
+(pdftex.def)             Requested size: 476.83508pt x 238.41895pt.
+
+Overfull \hbox (43.35104pt too wide) in paragraph at lines 237--237
+ [] 
+ []
+
+
+Overfull \vbox (19.60205pt too high) detected at line 237
+ []
+
+
 
 [12
 
-]
+ <./freq_spectrum.png>]
 
 [13
 
@@ -957,14 +1012,16 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 [27
 
 ]
-Overfull \vbox (1.7617pt too high) detected at line 1189
- []
-
+<images/time_freq_domain.png, id=170, 803.0pt x 301.125pt>
+File: images/time_freq_domain.png Graphic file (type png)
+<use images/time_freq_domain.png>
+Package pdftex.def Info: images/time_freq_domain.png  used on input line 398.
+(pdftex.def)             Requested size: 390.13298pt x 146.30275pt.
 
 
 [28
 
-]
+ <./images/time_freq_domain.png>]
 
 [29
 
@@ -977,10 +1034,6 @@ Overfull \vbox (1.7617pt too high) detected at line 1189
 [31
 
 ]
-Overfull \vbox (5.59016pt too high) detected at line 1189
- []
-
-
 
 [32
 
@@ -997,10 +1050,6 @@ Overfull \vbox (5.59016pt too high) detected at line 1189
 [35
 
 ]
-Overfull \vbox (4.75685pt too high) detected at line 1189
- []
-
-
 
 [36
 
@@ -1017,10 +1066,6 @@ Overfull \vbox (4.75685pt too high) detected at line 1189
 [39
 
 ]
-Overfull \vbox (4.91086pt too high) detected at line 1189
- []
-
-
 
 [40
 
@@ -1033,10 +1078,6 @@ Overfull \vbox (4.91086pt too high) detected at line 1189
 [42
 
 ]
-Overfull \vbox (5.59016pt too high) detected at line 1189
- []
-
-
 
 [43
 
@@ -1053,30 +1094,10 @@ Overfull \vbox (5.59016pt too high) detected at line 1189
 [46
 
 ]
-Overfull \hbox (15.06575pt too wide) in paragraph at lines 1189--1189
- [][] 
- []
-
-
 
 [47
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1217--1217
-[]|\OT1/cmss/m/n/10 Differentiation in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1217--1217
-[]|\OT1/cmss/m/n/10 Differentiation in
- []
-
-
-Overfull \hbox (8.28497pt too wide) in paragraph at lines 1217--1217
- [] 
- []
-
-
 
 [48
 
@@ -1093,35 +1114,491 @@ Overfull \hbox (8.28497pt too wide) in paragraph at lines 1217--1217
 [51
 
 ]
+
+[52
+
+]
+
+[53
+
+]
+
+[54
+
+]
+
+[55
+
+]
+
+[56
+
+]
+
+[57
+
+]
+Overfull \vbox (2.16016pt too high) detected at line 1547
+ []
+
+
+
+[58
+
+]
+
+[59
+
+]
+
+[60
+
+]
+
+[61
+
+]
+Overfull \vbox (1.3274pt too high) detected at line 1547
+ []
+
+
+
+[62
+
+]
+
+[63
+
+]
+
+[64
+
+]
+
+[65
+
+]
+Overfull \vbox (1.4814pt too high) detected at line 1547
+ []
+
+
+
+[66
+
+]
+
+[67
+
+]
+
+[68
+
+]
+Overfull \vbox (1.74359pt too high) detected at line 1547
+ []
+
+
+
+[69
+
+]
+
+[70
+
+]
+
+[71
+
+]
+
+[72
+
+]
+
+[73
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1575
+[]|\T1/cmss/m/n/10 Differentiation in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1575
+[]|\T1/cmss/m/n/10 Differentiation in
+ []
+
+
+
+[74
+
+]
+
+[75
+
+]
+
+[76
+
+]
+
+[77
+
+]
+
+[78
+
+]
+
+[79
+
+]
+
+[80
+
+]
+
+[81
+
+]
+
+[82
+
+]
+
+[83
+
+]
+
+[84
+
+]
+
+[85
+
+]
+
+[86
+
+]
+
+[87
+
+]
+
+[88
+
+]
+
+[89
+
+]
+
+[90
+
+]
+
+[91
+
+]
+
+[92
+
+]
+<images/freqSpectrum.png, id=773, 999.735pt x 549.05125pt>
+File: images/freqSpectrum.png Graphic file (type png)
+<use images/freqSpectrum.png>
+Package pdftex.def Info: images/freqSpectrum.png  used on input line 1766.
+(pdftex.def)             Requested size: 346.78854pt x 190.45335pt.
+
+Overfull \vbox (19.75291pt too high) detected at line 1766
+ []
+
+
+
+[93
+
+ <./images/freqSpectrum.png>]
+<images/lowPassFilter.png, id=780, 1011.78pt x 394.47375pt>
+File: images/lowPassFilter.png Graphic file (type png)
+<use images/lowPassFilter.png>
+Package pdftex.def Info: images/lowPassFilter.png  used on input line 1780.
+(pdftex.def)             Requested size: 346.79501pt x 216.73851pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-label}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1780   \end{frame}
+                    
+Overfull \vbox (33.92162pt too high) detected at line 1780
+ []
+
+
+
+[94
+
+ <./images/lowPassFilter.png>]
+<images/highPassFilter.png, id=786, 1002.74625pt x 394.47375pt>
+File: images/highPassFilter.png Graphic file (type png)
+<use images/highPassFilter.png>
+Package pdftex.def Info: images/highPassFilter.png  used on input line 1794.
+(pdftex.def)             Requested size: 346.78937pt x 216.73851pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-label}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1794   \end{frame}
+                    
+Overfull \vbox (36.03807pt too high) detected at line 1794
+ []
+
+
+
+[95
+
+ <./images/highPassFilter.png>]
+<images/bandPassSignal.png, id=792, 1015.795pt x 394.47375pt>
+File: images/bandPassSignal.png Graphic file (type png)
+<use images/bandPassSignal.png>
+Package pdftex.def Info: images/bandPassSignal.png  used on input line 1808.
+(pdftex.def)             Requested size: 346.7917pt x 216.73851pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-label}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1808   \end{frame}
+                    
+Overfull \vbox (33.92162pt too high) detected at line 1808
+ []
+
+
+
+[96
+
+ <./images/bandPassSignal.png>]
+<images/bandRejectSignal.png, id=798, 1011.78pt x 394.47375pt>
+File: images/bandRejectSignal.png Graphic file (type png)
+<use images/bandRejectSignal.png>
+Package pdftex.def Info: images/bandRejectSignal.png  used on input line 1822.
+(pdftex.def)             Requested size: 346.79501pt x 216.73851pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-label}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1822   \end{frame}
+                    
+Overfull \vbox (36.03807pt too high) detected at line 1822
+ []
+
+
+
+[97
+
+ <./images/bandRejectSignal.png>]
+<images/lowFreqHighFreq.png, id=805, 657.95813pt x 158.09062pt>
+File: images/lowFreqHighFreq.png Graphic file (type png)
+<use images/lowFreqHighFreq.png>
+Package pdftex.def Info: images/lowFreqHighFreq.png  used on input line 1840.
+(pdftex.def)             Requested size: 303.4375pt x 72.9083pt.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1840.
+ (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+
+[98
+
+ <./images/lowFreqHighFreq.png>]
+File: images/lowFreqHighFreq.png Graphic file (type png)
+<use images/lowFreqHighFreq.png>
+Package pdftex.def Info: images/lowFreqHighFreq.png  used on input line 1840.
+(pdftex.def)             Requested size: 303.4375pt x 72.9083pt.
+
+
+[99
+
+]
+<images/imageCmp2.png, id=823, 428.19975pt x 363.15675pt>
+File: images/imageCmp2.png Graphic file (type png)
+<use images/imageCmp2.png>
+Package pdftex.def Info: images/imageCmp2.png  used on input line 1857.
+(pdftex.def)             Requested size: 216.74202pt x 183.82216pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-label}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1857   \end{frame}
+                    
+Overfull \vbox (11.45473pt too high) detected at line 1857
+ []
+
+
+
+[100
+
+ <./images/imageCmp2.png>]
+<images/kSpaceSignal.png, id=831, 202.95825pt x 236.68425pt>
+File: images/kSpaceSignal.png Graphic file (type png)
+<use images/kSpaceSignal.png>
+Package pdftex.def Info: images/kSpaceSignal.png  used on input line 1883.
+(pdftex.def)             Requested size: 113.81068pt x 113.80939pt.
+
+
+[101
+
+ <./images/kSpaceSignal.png>]
+File: images/kSpaceSignal.png Graphic file (type png)
+<use images/kSpaceSignal.png>
+Package pdftex.def Info: images/kSpaceSignal.png  used on input line 1883.
+(pdftex.def)             Requested size: 113.81068pt x 113.80939pt.
+
+
+[102
+
+]
+File: images/kSpaceSignal.png Graphic file (type png)
+<use images/kSpaceSignal.png>
+Package pdftex.def Info: images/kSpaceSignal.png  used on input line 1883.
+(pdftex.def)             Requested size: 113.81068pt x 113.80939pt.
+<images/positionSpaceSignal.png, id=847, 202.95825pt x 233.673pt>
+File: images/positionSpaceSignal.png Graphic file (type png)
+<use images/positionSpaceSignal.png>
+Package pdftex.def Info: images/positionSpaceSignal.png  used on input line 1883.
+(pdftex.def)             Requested size: 113.81068pt x 113.80905pt.
+
+
+[103
+
+ <./images/positionSpaceSignal.png>]
+<images/mri1.png, id=857, 172.84575pt x 316.18124pt>
+File: images/mri1.png Graphic file (type png)
+<use images/mri1.png>
+Package pdftex.def Info: images/mri1.png  used on input line 1915.
+(pdftex.def)             Requested size: 85.35713pt x 142.26576pt.
+
+
+[104
+
+ <./images/mri1.png>]
+File: images/mri1.png Graphic file (type png)
+<use images/mri1.png>
+Package pdftex.def Info: images/mri1.png  used on input line 1915.
+(pdftex.def)             Requested size: 85.35713pt x 142.26576pt.
+
+
+[105
+
+]
+File: images/mri1.png Graphic file (type png)
+<use images/mri1.png>
+Package pdftex.def Info: images/mri1.png  used on input line 1915.
+(pdftex.def)             Requested size: 85.35713pt x 142.26576pt.
+<images/mri2.png, id=871, 163.20975pt x 320.397pt>
+File: images/mri2.png Graphic file (type png)
+<use images/mri2.png>
+Package pdftex.def Info: images/mri2.png  used on input line 1915.
+(pdftex.def)             Requested size: 85.36015pt x 142.26576pt.
+
+
+[106
+
+ <./images/mri2.png>]
+<images/noisySignal.png, id=879, 358.941pt x 149.358pt>
+File: images/noisySignal.png Graphic file (type png)
+<use images/noisySignal.png>
+Package pdftex.def Info: images/noisySignal.png  used on input line 1941.
+(pdftex.def)             Requested size: 113.8064pt x 85.36055pt.
+
+
+[107
+
+ <./images/noisySignal.png>]
+File: images/noisySignal.png Graphic file (type png)
+<use images/noisySignal.png>
+Package pdftex.def Info: images/noisySignal.png  used on input line 1941.
+(pdftex.def)             Requested size: 113.8064pt x 85.36055pt.
+
+
+[108
+
+]
+File: images/noisySignal.png Graphic file (type png)
+<use images/noisySignal.png>
+Package pdftex.def Info: images/noisySignal.png  used on input line 1941.
+(pdftex.def)             Requested size: 113.8064pt x 85.36055pt.
+<images/denoisedAudio.png, id=893, 357.13425pt x 154.77824pt>
+File: images/denoisedAudio.png Graphic file (type png)
+<use images/denoisedAudio.png>
+Package pdftex.def Info: images/denoisedAudio.png  used on input line 1941.
+(pdftex.def)             Requested size: 113.81119pt x 85.35974pt.
+
+
+[109
+
+ <./images/denoisedAudio.png>]
+
+[110
+
+]
+
+[111
+
+]
+
+[112
+
+]
+
+[113
+
+]
+
+[114
+
+]
+
+[115
+
+]
+
+[116
+
+]
+
+[117
+
+]
 \tf@nav=\write6
-\openout6 = `FT.nav'.
+\openout6 = `main.nav'.
 
 \tf@toc=\write7
-\openout7 = `FT.toc'.
+\openout7 = `main.toc'.
 
 \tf@snm=\write8
-\openout8 = `FT.snm'.
+\openout8 = `main.snm'.
 
- (FT.aux)
+ (main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
-Package rerunfilecheck Info: File `FT.out' has not changed.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37730 strings out of 473899
- 901239 string characters out of 5726972
- 1736044 words of memory out of 5000000
- 59842 multiletter control sequences out of 15000+600000
- 571461 words of font info for 84 fonts, out of 8000000 for 9000
+ 40412 strings out of 473899
+ 952647 string characters out of 5726972
+ 1737408 words of memory out of 5000000
+ 62374 multiletter control sequences out of 15000+600000
+ 580329 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,123p,784b,2715s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on FT.pdf (51 pages, 653273 bytes).
+ 128i,18n,123p,795b,2715s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi450\ectt0800.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi0600.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0500.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0700.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1000.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1200.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0600.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on main.pdf (117 pages, 1935627 bytes).
 PDF statistics:
- 1734 PDF objects out of 2073 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
- 804 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1502 PDF objects out of 1728 (max. 8388607)
+ 236 named destinations out of 1000 (max. 500000)
+ 884 words of extra memory for PDF output out of 10000 (max. 10000000)
 
